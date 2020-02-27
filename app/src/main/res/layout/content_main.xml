@@ -9,11 +9,11 @@
     tools:showIn="@layout/activity_main">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/flight"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:text="Button"
+        android:text="Log a flight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

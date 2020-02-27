@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         utcDate.setText(getUTCDateAsString());
 
         final FeedReaderDBHelper dbHelper = new FeedReaderDBHelper(getApplicationContext());
-        Button flight = findViewById(R.id.button);
+        Button flight = findViewById(R.id.flight);
         flight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
