@@ -8,18 +8,29 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="parent">
@@ -48,28 +59,31 @@
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="14dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="parent">
 
-            <TextView
+            <TextClock
                 android:id="@+id/lclTime"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:format24Hour="HHmm"
                 android:gravity="center_horizontal"
                 android:textSize="16sp" />
 
-            <TextView
+            <TextClock
                 android:id="@+id/utcTime"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:format24Hour="HHmm"
                 android:gravity="center_horizontal"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:timeZone="0" />
         </LinearLayout>
 
         <LinearLayout
@@ -97,6 +111,7 @@
                 android:textSize="16sp" />
 
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

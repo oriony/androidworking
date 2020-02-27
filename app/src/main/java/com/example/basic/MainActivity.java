@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        TextView lclTime = (TextView)findViewById(R.id.lclTime);
-        lclTime.setText(getTimeAsString());
-        TextView utcTime = (TextView)findViewById(R.id.utcTime);
-        utcTime.setText(getUTCTimeAsString());
+        //TextView lclTime = (TextView)findViewById(R.id.lclTime);
+        //lclTime.setText(getTimeAsString());
+        //TextView utcTime = (TextView)findViewById(R.id.utcTime);
+        //utcTime.setText(getUTCTimeAsString());
 
         TextView lclDate = (TextView)findViewById(R.id.lclDate);
         lclDate.setText(getDateAsString());
@@ -51,12 +52,15 @@ public class MainActivity extends AppCompatActivity {
         utcDate.setText(getUTCDateAsString());
 
         final FeedReaderDBHelper dbHelper = new FeedReaderDBHelper(getApplicationContext());
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        Button flight = findViewById(R.id.button);
+        flight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, getDateAsString(), Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                startActivity(intent);
+
+                //Snackbar.make(view, getDateAsString(), Snackbar.LENGTH_LONG)
+                //        .setAction("Action", null).show();
             }
         });
 
