@@ -51,12 +51,26 @@ public class MainActivity extends AppCompatActivity {
         TextView utcDate = (TextView)findViewById(R.id.utcDate);
         utcDate.setText(getUTCDateAsString());
 
+        TextView since_flight = (TextView)findViewById(R.id.since_flight);
+        since_flight.setText("52");
+        TextView since_night = (TextView)findViewById(R.id.since_night);
+        since_night.setText("1");
+        TextView since_ifr = (TextView)findViewById(R.id.since_ifr);
+        since_ifr.setText("52");
+        TextView since_dual = (TextView)findViewById(R.id.since_dual);
+        since_dual.setText("1");
+
+        TextView medical_expiry = (TextView)findViewById(R.id.medical_expiry);
+        medical_expiry.setText("Medical expires in " + "52" + " days");
+        TextView medical_type = (TextView)findViewById(R.id.medical_type);
+        medical_type.setText("(Category " + "1" + ")");
+
         final FeedReaderDBHelper dbHelper = new FeedReaderDBHelper(getApplicationContext());
         Button flight = findViewById(R.id.flight);
         flight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                Intent intent = new Intent(MainActivity.this, ScrollingActivity.class);
                 startActivity(intent);
 
                 //Snackbar.make(view, getDateAsString(), Snackbar.LENGTH_LONG)
