@@ -187,7 +187,6 @@
                 android:ems="16"
                 android:hint="Passengers"
                 android:inputType="textMultiLine|textPersonName" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -210,8 +209,6 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/cancel"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-
         </LinearLayout>
-
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

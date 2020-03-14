@@ -6,13 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import static com.example.basic.DateTimeText.getDateAsString;
-
-
 
 public class FlightEntry extends AppCompatActivity {
 
@@ -22,7 +17,6 @@ public class FlightEntry extends AppCompatActivity {
         setContentView(R.layout.activity_scrolling2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         Bundle extras = getIntent().getExtras();
 
         TextView e_date = findViewById(R.id.e_date);
@@ -48,7 +42,6 @@ public class FlightEntry extends AppCompatActivity {
                 Intent final_entry = new Intent(FlightEntry.this, HomeScreen.class);
                 final_entry.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(final_entry);
-
             }
         });
 

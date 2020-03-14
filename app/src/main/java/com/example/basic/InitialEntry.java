@@ -1,19 +1,14 @@
 package com.example.basic;
 
-import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.DialogFragment;
-
 import static com.example.basic.DateTimeText.getDateAsString;
 
 public class InitialEntry extends AppCompatActivity {
@@ -50,33 +45,27 @@ public class InitialEntry extends AppCompatActivity {
                 String pic = entry_pic.getText().toString();
                 String pax = entry_pax.getText().toString();
 
+                String time_type;
                 boolean check_day = ((CheckBox) findViewById(R.id.check_day)).isChecked();
                 boolean check_night = ((CheckBox) findViewById(R.id.check_night)).isChecked();
                 boolean check_ifr = ((CheckBox) findViewById(R.id.check_ifr)).isChecked();
                 boolean check_xc = ((CheckBox) findViewById(R.id.check_xc)).isChecked();
-
-                String time_type;
-
                 if (check_day)
                     time_type = "1";
                 else
                     time_type = "0";
-
                 if (check_night)
                     time_type = time_type + "1";
                 else
                     time_type = time_type + "0";
-
                 if (check_ifr)
                     time_type = time_type + "1";
                 else
                     time_type = time_type + "0";
-
                 if (check_xc)
                     time_type = time_type + "1";
                 else
                     time_type = time_type + "0";
-
 
                 Intent detail_entry = new Intent(InitialEntry.this, FlightEntry.class);
                 detail_entry.putExtra("DATE", date);

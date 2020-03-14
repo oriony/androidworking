@@ -18,14 +18,12 @@ public class DateTimeText {
         final SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
         final String utcDate = sdf.format(new Date());
-
         return utcDate;
     }
 
     public static String getDateAsString() {
         final SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
         final String lclDate = sdf.format(new Date());
-
         return lclDate;
     }
 
@@ -33,18 +31,14 @@ public class DateTimeText {
         final SimpleDateFormat sdf = new SimpleDateFormat(TIME_FORMAT);
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
         final String utcTime = sdf.format(new Date());
-
         return utcTime;
     }
 
     public static String getTimeAsString() {
         final SimpleDateFormat sdf = new SimpleDateFormat(TIME_FORMAT);
         final String lclTime = sdf.format(new Date());
-
         return lclTime;
     }
-
-
 
     public static Date stringDateToDate(String StrDate) {
         Date dateToReturn = null;
