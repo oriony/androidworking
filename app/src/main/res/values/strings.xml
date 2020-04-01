@@ -20,4 +20,14 @@
     <string name="login_failed">"Login failed"</string>
     <string name="cancel">Cancel</string>
     <string name="back">Back</string>
+    <string name="dateerror">Enter a valid date in yyyy-mm-dd</string>
+    <string name="regerror">Enter a valid registration in GXXX or C-FXXX</string>
+    <string name="typeerror">Enter a valid aircraft type</string>
+    <string name="timeerror">Enter a valid flight time</string>
+    <string name="aerodromeerror">Enter a valid aerodrome code</string>
+    <string name="nameerror">Enter a valid PIC name</string>
+    <string name="nochecked">Please select at least one flight type</string>
+    <string name="datepicker">Set Date</string>
+    <string name="Aircraft">Aircraft</string>
+    <string name="Registration">Registration</string>
 </resources>

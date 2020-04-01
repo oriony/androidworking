@@ -21,14 +21,14 @@ public class FlightEntry extends AppCompatActivity {
 
         TextView e_date = findViewById(R.id.e_date);
         TextView entry_plane = findViewById(R.id.entry_plane);
-        final EditText entry_time = findViewById(R.id.entry_time);
+        TextView entry_time = findViewById(R.id.entry_time);
         TextView entry_route = findViewById(R.id.entry_route);
         TextView e_pic = findViewById(R.id.e_pic);
         TextView e_pax = findViewById(R.id.e_pax);
 
         e_date.setText(extras.getString("DATE"));
-        entry_plane.setText(extras.getString("REG") + extras.getString("TYPE"));
-        entry_time.setText(extras.getString("DIV"));
+        entry_plane.setText(extras.getString("REG"));
+        entry_time.setText(extras.getString("TIME"));
         entry_route.setText(extras.getString("ORIGIN")+" > "+extras.getString("DEST"));
         e_pic.setText(extras.getString("PIC"));
         e_pax.setText(extras.getString("PAX"));
