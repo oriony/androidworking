@@ -25,6 +25,9 @@ public class HomeScreen extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        MainLogDBHelper main_dbHelper = new MainLogDBHelper(this);
+        MedicalDBHelper recents_dbHelper = new MedicalDBHelper(this);
+
         //TextView lclTime = (TextView)findViewById(R.id.lclTime);
         //lclTime.setText(getTimeAsString());
         //TextView utcTime = (TextView)findViewById(R.id.utcTime);
@@ -49,7 +52,7 @@ public class HomeScreen extends AppCompatActivity {
         TextView medical_type = (TextView)findViewById(R.id.medical_type);
         medical_type.setText("(Category " + "1" + ")");
 
-        final FeedReaderDBHelper dbHelper = new FeedReaderDBHelper(getApplicationContext());
+        final MainLogDBHelper dbHelper = new MainLogDBHelper(getApplicationContext());
         Button flight = findViewById(R.id.flight);
         flight.setOnClickListener(new View.OnClickListener() {
             @Override

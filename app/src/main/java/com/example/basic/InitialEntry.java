@@ -80,7 +80,7 @@ public class InitialEntry extends AppCompatActivity {
                 detail_entry.putExtra("PIC", pic);
                 detail_entry.putExtra("PAX", pax);
 
-                if (check_day || check_night) {
+                if (check_day || check_night || check_ifr) {
                     if (mAwesomeValidation.validate()) {
                         startActivity(detail_entry);
                     }
