@@ -77,7 +77,7 @@ public class FlightEntry extends AppCompatActivity {
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
 
                 ContentValues values = new ContentValues();
-                values.put(MainLogContract.MainLog.COLUMN_NAME_TIMESTAMP, title);
+                //values.put(MainLogContract.MainLog.COLUMN_NAME_TIMESTAMP, title);
                 values.put(MainLogContract.MainLog.COLUMN_NAME_DATE, extras.getString("DATE"));
                 values.put(MainLogContract.MainLog.COLUMN_NAME_REGISTRATION, extras.getString("REG"));
                 values.put(MainLogContract.MainLog.COLUMN_NAME_ORIGIN, extras.getString("ORIGIN"));
