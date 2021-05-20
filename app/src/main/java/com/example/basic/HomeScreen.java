@@ -60,8 +60,8 @@ public class HomeScreen extends AppCompatActivity {
                 Intent intent = new Intent(HomeScreen.this, InitialEntry.class);
                 startActivity(intent);
 
-                //Snackbar.make(view, getDateAsString(), Snackbar.LENGTH_LONG)
-                //        .setAction("Action", null).show();
+                Snackbar.make(view, getDateAsString(), Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
 
