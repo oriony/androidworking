@@ -39,18 +39,18 @@ public class HomeScreen extends AppCompatActivity {
         utcDate.setText(getUTCDateAsString());
 
         TextView since_flight = (TextView)findViewById(R.id.since_flight);
-        since_flight.setText("52");
-        TextView since_night = (TextView)findViewById(R.id.since_night);
-        since_night.setText("1");
-        TextView since_ifr = (TextView)findViewById(R.id.since_ifr);
-        since_ifr.setText("52");
+        since_flight.setText("1");
         TextView since_dual = (TextView)findViewById(R.id.since_dual);
         since_dual.setText("1");
+        TextView since_night = (TextView)findViewById(R.id.since_night);
+        since_night.setText("42");
+        TextView since_ifr = (TextView)findViewById(R.id.since_ifr);
+        since_ifr.setText("-");
 
         TextView medical_expiry = (TextView)findViewById(R.id.medical_expiry);
-        medical_expiry.setText("Medical expires in " + "52" + " days");
+        medical_expiry.setText("Medical expires in " + "108" + " days");
         TextView medical_type = (TextView)findViewById(R.id.medical_type);
-        medical_type.setText("(Category " + "1" + ")");
+        medical_type.setText("Category " + "3");
 
         final MainLogDBHelper dbHelper = new MainLogDBHelper(getApplicationContext());
         Button flight = findViewById(R.id.flight);
@@ -60,8 +60,8 @@ public class HomeScreen extends AppCompatActivity {
                 Intent intent = new Intent(HomeScreen.this, InitialEntry.class);
                 startActivity(intent);
 
-                Snackbar.make(view, getDateAsString(), Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, getDateAsString(), Snackbar.LENGTH_LONG)
+                //        .setAction("Action", null).show();
             }
         });
 
